@@ -1,0 +1,22 @@
+.home-welcome {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-text-section {
+  width: 60%;
+}
+
+.home-img-section {
+  display: flex;
+  width: 30%;
+}
+
+.home-img-section > .home-img {
+  display: flex;
+  border: 5px solid black;
+  border-radius: 10px;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}

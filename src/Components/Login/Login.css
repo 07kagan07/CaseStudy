@@ -1,0 +1,15 @@
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+.login-form > a {
+  display: flex;
+  justify-content: center;
+}

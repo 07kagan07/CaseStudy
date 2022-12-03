@@ -1,0 +1,64 @@
+.post-wrapper {
+  color: white;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  background-image: linear-gradient(#000000, #1e1e1e);
+  border: 1px solid #000000;
+}
+
+.post-user {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 24px 15px 0 18px;
+}
+
+.user-photo {
+  display: flex;
+  width: 64px;
+  padding-right: 15px;
+}
+
+.user-pp {
+  width: 64px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.user-info-username {
+  font-size: 1.4em;
+}
+
+.post-detail {
+  margin: 0 41px 0 95px;
+}
+
+.post-img > img {
+  margin: 18px 0;
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 2%;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 136px;
+  padding-bottom: 20px;
+  /* sağ dayalı 136px pd */
+}
+
+.post-icon {
+  padding-right: 20px;
+  display: flex;
+  cursor: pointer;
+}
+
+.post-icon > svg:hover path {
+  fill: rgb(165, 40, 40);
+}
+
+.post-icon > svg {
+  padding-right: 7px;
+}

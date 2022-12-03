@@ -1,0 +1,33 @@
+.nav-wrapper {
+  height: 92px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.4em;
+}
+.nav-menu {
+  display: flex;
+  width: 220px;
+  justify-content: space-between;
+}
+
+.nav-menu > a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-button {
+  display: flex;
+  flex-direction: row;
+}
+
+.profile-badge {
+  display: flex;
+  flex-direction: row;
+  padding-right: 19px;
+}
+
+.pp-image {
+  border-radius: 50%;
+}
