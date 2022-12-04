@@ -5,6 +5,7 @@ import "./Register.css";
 const Register = () => {
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
+  const [pp_src, setPp_src] = useState();
 
   const handlerSubmit = async (e) => {
     e.preventDefault();
@@ -14,6 +15,7 @@ const Register = () => {
       body: JSON.stringify({
         username: username,
         password: password,
+        pp_src: pp_src ? pp_src : "",
       }),
     });
 
