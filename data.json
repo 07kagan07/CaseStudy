@@ -243,6 +243,21 @@
       "username": "kagancoskun",
       "password": "123456",
       "id": 14
+    },
+    {
+      "username": "kaganc",
+      "password": "654321",
+      "pp_src": "",
+      "id": 15
+    }
+  ],
+
+  "comments": [
+    {
+      "id": 1,
+      "userId": 1,
+      "postId": 1,
+      "comment": "Lorem ipsum is the industry standart for placeholder texts.I am using lorem to make this post look real.Be adivsed that this text will be removed after the production stage of the site.Lorem ipsum is the industry standart for placeholder texts.I am using lorem to make this post look real.Be adivsed that..I am using lorem to make this post look real.Be adivsed that"
     }
   ]
 }
