@@ -1,26 +1,39 @@
 import React, { useState } from "react";
 import "./Login.css";
 import { Link, useNavigate } from "react-router-dom";
-// import { MainContext, useContext } from "../../MainContext";
+import { MainContext, useContext } from "../../MainContext";
 
 const Login = () => {
   const navigate = useNavigate();
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
+  const { user, setUser } = useContext(MainContext);
 
   const handlerSubmit = async (e) => {
     e.preventDefault();
-    await fetch("http://localhost:3004/users", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        username: username,
-        password: password,
-      }),
+    const response = await fetch("http://localhost:3004/users", {
+      method: "GET",
     });
-    navigate("/home");
+    let responseBody;
+    try {
+      responseBody = await response.json();
+    } catch (e) {
+      console.error(e);
+      responseBody = null;
+    }
+    if ((await response).ok) {
+      // setUser(responseBody);
+      let responseUser = responseBody.filter(
+        (item) => item.username === username && item.password === password
+      );
+
+      if ((await responseUser.length) === 0) {
+        alert("Kullanıcı adı veya şifre yalnış");
+      } else {
+        setUser(responseUser);
+        navigate("/home");
+      }
+    }
   };
 
   return (
