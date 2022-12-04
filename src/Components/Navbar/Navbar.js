@@ -6,11 +6,11 @@ import { MainContext, useContext } from "../../MainContext";
 const Navbar = () => {
   const { user, setUser } = useContext(MainContext);
 
-  useEffect(() => {
-    fetch("http://localhost:3004/users/1")
-      .then((req) => req.json())
-      .then((data) => setUser(data));
-  }, [setUser]);
+  // useEffect(() => {
+  //   fetch("http://localhost:3004/users/1")
+  //     .then((req) => req.json())
+  //     .then((data) => setUser(data));
+  // }, [setUser]);
 
   return (
     <div className="nav-wrapper">
@@ -32,8 +32,8 @@ const Navbar = () => {
             <img
               className="pp-image"
               src={
-                user?.pp_src
-                  ? user.pp_src
+                user[0]?.pp_src
+                  ? user[0].pp_src
                   : require("../../Constant/defaultPp.png")
               }
               alt="profileimage"
@@ -42,12 +42,18 @@ const Navbar = () => {
             />
           </div>
           <div>
-            {user?.username ? user.username : <Link to={"/login"}>Login</Link>}
+            {user[0]?.username ? (
+              user[0].username
+            ) : (
+              <Link to={"/login"}>Login</Link>
+            )}
           </div>
         </div>
         <div>
-          {user ? (
-            <Link to={"/login"}>Logout</Link>
+          {user[0] ? (
+            <Link onClick={async () => await setUser("")} to={"/login"}>
+              Logout
+            </Link>
           ) : (
             <Link to={"/register"}>Register</Link>
           )}
