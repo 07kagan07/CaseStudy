@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { MainContext, useContext } from "../../MainContext";
 
 const Login = () => {
-  const navigate = useNavigate();
+    const navigate = useNavigate();
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
   const { setUser } = useContext(MainContext);

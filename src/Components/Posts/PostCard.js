@@ -8,19 +8,19 @@ const PostCard = ({ post, actionstatus }) => {
   return (
     <div className="post-wrapper">
       <div className="post-user">
-        <PostUser id={post.userId} />
+        <PostUser id={post?.userId} />
       </div>
       <div className="post-detail">
         <PostContent
-          textContent={post.textContent}
-          imageContentsrc={post.imageContentsrc}
+          textContent={post?.textContent}
+          imageContentsrc={post?.imageContentsrc}
         />
         {actionstatus && (
           <div className="post-actions">
             <PostActions
-              id={post.id}
-              likes={post.likes}
-              comment_count={post.comment_count}
+              id={post?.id}
+              likes={post?.likes}
+              comment_count={post?.comment_count}
             />
           </div>
         )}

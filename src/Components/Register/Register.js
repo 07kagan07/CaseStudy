@@ -9,7 +9,7 @@ const Register = () => {
 
   const handlerSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:3004/users", {
+    await fetch("http://localhost:3004/users", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -35,7 +35,11 @@ const Register = () => {
       </div>
       <div>
         <form className="register-form" onSubmit={handlerSubmit}>
-          <input readOnly placeholder="Upload Profile Picture" />
+          <input
+            readOnly
+            placeholder="Upload Profile Picture"
+            onChange={(e) => setPp_src(e.target.value)}
+          />
 
           <label htmlFor="username">Username</label>
           <input

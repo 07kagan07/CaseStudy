@@ -1,7 +1,7 @@
 .post-wrapper {
   color: white;
   margin-top: 100px;
-  margin-bottom: 100px;
+  /* margin-bottom: 100px; */
   background-image: linear-gradient(#000000, #1e1e1e);
   border: 1px solid #000000;
 }
@@ -61,4 +61,26 @@
 
 .post-icon > svg {
   padding-right: 7px;
+}
+
+.comment-wrapper {
+  background-image: linear-gradient(#1e1e1e, #000000);
+}
+
+.comment-section {
+  padding: 8px 41px 0 95px;
+
+  color: #fff;
+  height: 500px;
+}
+
+.comment-inputs {
+  display: flex;
+  width: 100%;
+}
+.comment-inputs > button {
+  width: 10%;
+}
+.comment-inputs > input {
+  width: 90%;
 }

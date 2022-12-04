@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const PostActions = ({ id, likes, comment_count }) => {
   const [likeState, setLikeState] = useState(false);
   const [like, setLike] = useState(likes);
+
+  const navigate = useNavigate();
 
   const likeButton = () => {
     likeState ? unLiked() : liked();
@@ -50,6 +53,7 @@ const PostActions = ({ id, likes, comment_count }) => {
       </div>
       <div className="post-icon">
         <svg
+          onClick={() => navigate(`/post/${id}`)}
           width="21"
           height="20"
           viewBox="0 0 21 20"
