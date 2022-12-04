@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import { MainContext } from "./MainContext";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 //pages
 import Login from "./Components/Login/Login";
@@ -10,7 +10,6 @@ import Home from "./Components/Home/Home";
 import Admin from "./Components/Admin/Admin";
 function App() {
   const [user, setUser] = useState(true);
-
   const data = {
     user,
     setUser,
@@ -22,6 +21,7 @@ function App() {
         <MainContext.Provider value={data}>
           <Navbar />
           <Routes>
+            <Route path="/" element={<Navigate to="/login" />} />
             <Route path="/login" element={<Login />}></Route>
             <Route path="/register" element={<Register />}></Route>
             {user && (
