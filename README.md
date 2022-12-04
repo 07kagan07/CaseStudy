@@ -1,25 +1,27 @@
 # Case Study
 
-
 ## Kullanılabilir Scriptler
 
-Projeyi başlatmadan önce 
+Projeyi başlatmadan önce
+
 ### `npm install `
+
 ile bütün gerekli paketleri indirelim.
 
-Daha sonra json serverını başlatın. 
+Daha sonra json serverını başlatın.
 3004 portunda olması önemli fetching işlemleri bu port üzerinde gerçekleşiyor.
 Aşağıdaki gibi başlatabilirsiniz
+
 ### `json-server --watch data.json --port 3004`
 
-
 ### `npm start`
+
 ile development ortamında projeyi açabilirsiniz.
-Proje tarayacı üzerinde  [http://localhost:3000](http://localhost:3000) linki üzerinde çalışıyor olacak.
+Proje tarayacı üzerinde [http://localhost:3000](http://localhost:3000) linki üzerinde çalışıyor olacak.
 
-Login ve Register fonksiyonları bir backend bağlantısı olmadığı için henüz işlevsel değildir.
+Register componenti resim uploadı eklenecek.
 
-Sonraki versiyonlarda bunlarda işlev kazanacaklar.
+Sonraki versiyonda işlev kazanacak.
 
 Proje açıldığında login sayfasında değilse [http://localhost:3000/login](http://localhost:3000/login) sayfasına manuel olarak gidin.
 

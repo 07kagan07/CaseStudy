@@ -5,9 +5,20 @@ import "./Register.css";
 const Register = () => {
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
+  const [pp_src, setPp_src] = useState();
 
-  const handlerSubmit = (e) => {
+  const handlerSubmit = async (e) => {
     e.preventDefault();
+    const response = await fetch("http://localhost:3004/users", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        username: username,
+        password: password,
+        pp_src: pp_src ? pp_src : "",
+      }),
+    });
+
     alert(username, password);
   };
   // const userRegister = (username, password) => {};

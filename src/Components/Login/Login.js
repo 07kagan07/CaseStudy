@@ -7,7 +7,7 @@ const Login = () => {
   const navigate = useNavigate();
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
-  const { user, setUser } = useContext(MainContext);
+  const { setUser } = useContext(MainContext);
 
   const handlerSubmit = async (e) => {
     e.preventDefault();

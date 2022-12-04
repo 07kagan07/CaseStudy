@@ -1,16 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { MainContext, useContext } from "../../MainContext";
 
 const Navbar = () => {
   const { user, setUser } = useContext(MainContext);
-
-  // useEffect(() => {
-  //   fetch("http://localhost:3004/users/1")
-  //     .then((req) => req.json())
-  //     .then((data) => setUser(data));
-  // }, [setUser]);
 
   return (
     <div className="nav-wrapper">
