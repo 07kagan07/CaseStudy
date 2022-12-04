@@ -16,7 +16,7 @@
       "imageContentsrc": "https://img.freepik.com/premium-photo/big-ben-clock-tower-london-england_79295-6841.jpg?w=2000",
       "likes": 25,
       "comment_count": 0,
-      "status": 2
+      "status": 1
     },
     {
       "id": 2,
@@ -251,7 +251,6 @@
       "id": 15
     }
   ],
-
   "comments": [
     {
       "id": 1,

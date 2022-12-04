@@ -8,6 +8,7 @@ import Login from "./Components/Login/Login";
 import Register from "./Components/Register/Register";
 import Home from "./Components/Home/Home";
 import Admin from "./Components/Admin/Admin";
+import PostComments from "./Components/Posts/PostComments";
 function App() {
   const [user, setUser] = useState(true);
   const data = {
@@ -19,7 +20,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <MainContext.Provider value={data}>
-          <Navbar />
+          {user && <Navbar />}
           <Routes>
             <Route path="/" element={<Navigate to="/login" />} />
             <Route path="/login" element={<Login />}></Route>
@@ -28,6 +29,7 @@ function App() {
               <>
                 <Route path="/home" element={<Home />}></Route>
                 <Route path="/admin" element={<Admin />}></Route>
+                <Route path="/post/:id" element={<PostComments />}></Route>
               </>
             )}
           </Routes>
