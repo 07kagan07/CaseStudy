@@ -4,16 +4,19 @@ import { Link, useNavigate } from "react-router-dom";
 import { MainContext, useContext } from "../../MainContext";
 
 const Login = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
   const { setUser } = useContext(MainContext);
 
   const handlerSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:3004/users", {
-      method: "GET",
-    });
+    const response = await fetch(
+      `http://${process.env.REACT_APP_Localhost}:3004/users`,
+      {
+        method: "GET",
+      }
+    );
     let responseBody;
     try {
       responseBody = await response.json();

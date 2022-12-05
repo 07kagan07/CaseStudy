@@ -12,7 +12,7 @@ const PostActions = ({ id, likes, comment_count }) => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:3004/posts/${id}`, {
+    fetch(`http://${process.env.REACT_APP_Localhost}:3004/posts/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

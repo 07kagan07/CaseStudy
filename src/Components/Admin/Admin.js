@@ -20,7 +20,7 @@ const Admin = () => {
   const chPostStatus = (postStatus, id) => {
     postStatus < 2 ? (postStatus += 1) : (postStatus = 1);
     statusChanged ? setStatusChanged(false) : setStatusChanged(true);
-    fetch(`http://localhost:3004/posts/${id}`, {
+    fetch(`http://${process.env.REACT_APP_Localhost}:3004/posts/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -32,7 +32,7 @@ const Admin = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:3004/posts")
+    fetch(`http://${process.env.REACT_APP_Localhost}:3004/posts`)
       .then((req) => req.json())
       .then((data) => setPosts(data));
   }, [statusChanged]);

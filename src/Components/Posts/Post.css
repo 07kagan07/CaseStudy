@@ -16,13 +16,17 @@
 .user-photo {
   display: flex;
   width: 64px;
+  height: 20%;
   padding-right: 15px;
 }
 
 .user-pp {
   width: 64px;
-  object-fit: cover;
+  object-fit: fill;
   border-radius: 50%;
+}
+.user-info {
+  min-width: 120px;
 }
 
 .user-info-username {
@@ -71,7 +75,6 @@
   padding: 8px 41px 0 95px;
 
   color: #fff;
-  height: 500px;
 }
 
 .comment-inputs {
@@ -80,7 +83,30 @@
 }
 .comment-inputs > button {
   width: 10%;
+  font-size: 2em;
+  background: rgba(131, 131, 131, 0.5);
+  border-radius: 0px 12px 12px 0px;
+  cursor: pointer;
 }
-.comment-inputs > input {
+.comment-inputs > textarea {
   width: 90%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgb(255, 255, 255, 0.1);
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: white;
+  font-size: 1.1em;
+  padding-top: 10px;
+}
+
+.comment-detail {
+  display: flex;
+  padding: 40px 0 0 0;
+  min-width: 580px;
+}
+
+.comment-p {
+  display: flex;
+  padding: 0 40px;
+  margin: 0;
 }

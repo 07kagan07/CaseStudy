@@ -8,7 +8,7 @@ const PostCard = ({ post, actionstatus }) => {
   return (
     <div className="post-wrapper">
       <div className="post-user">
-        <PostUser id={post?.userId} />
+        <PostUser id={post?.userId} tag={true} />
       </div>
       <div className="post-detail">
         <PostContent
