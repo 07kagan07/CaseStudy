@@ -23,7 +23,6 @@ Register componenti resim uploadı eklenecek.
 
 Sonraki versiyonda işlev kazanacak.
 
-Proje açıldığında login sayfasında değilse [http://localhost:3000/login](http://localhost:3000/login) sayfasına manuel olarak gidin.
 
 username:superadmin
 password:123456
