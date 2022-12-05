@@ -9,7 +9,7 @@ const Register = () => {
 
   const handlerSubmit = async (e) => {
     e.preventDefault();
-    await fetch("http://localhost:3004/users", {
+    await fetch(`http://${process.env.REACT_APP_Localhost}:3004/users`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

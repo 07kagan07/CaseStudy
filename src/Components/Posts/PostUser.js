@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 
-const PostUser = ({ id }) => {
+const PostUser = ({ id, tag }) => {
   const [user, setUser] = useState();
   useEffect(() => {
-    fetch(`http://localhost:3004/users?id=${id}`)
+    fetch(`http://${process.env.REACT_APP_Localhost}:3004/users?id=${id}`)
       .then((req) => req.json())
       .then((data) => setUser(data[0]));
   }, [id]);
@@ -25,9 +25,11 @@ const PostUser = ({ id }) => {
         <div className="user-info-username">
           {user?.username ? user.username : "UnknownUser"}
         </div>
-        <div className="user-info-tag">
-          @{user?.username ? user.username : "UnknownUser"}
-        </div>
+        {tag && (
+          <div className="user-info-tag">
+            @{user?.username ? user.username : "UnknownUser"}
+          </div>
+        )}
       </div>
     </>
   );

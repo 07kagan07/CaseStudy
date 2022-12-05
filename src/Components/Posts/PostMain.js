@@ -5,7 +5,7 @@ const PostMain = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3004/posts?status=1")
+    fetch(`http://${process.env.REACT_APP_Localhost}:3004/posts?status=1`)
       .then((req) => req.json())
       .then((data) => setPosts(data));
   }, []);

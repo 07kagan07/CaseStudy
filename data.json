@@ -257,6 +257,24 @@
       "userId": 1,
       "postId": 1,
       "comment": "Lorem ipsum is the industry standart for placeholder texts.I am using lorem to make this post look real.Be adivsed that this text will be removed after the production stage of the site.Lorem ipsum is the industry standart for placeholder texts.I am using lorem to make this post look real.Be adivsed that..I am using lorem to make this post look real.Be adivsed that"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "postId": 1,
+      "comment": "Lorem ipsum is the industry standart for placeholder texts.I am using lorem to make this post look real.Be adivsed that this text will be removed after the production stage of the site.Lorem ipsum is the industry standart for placeholder texts.I am using lorem to make this post look real.Be adivsed that..I am using lorem to make this post look real.Be adivsed that"
+    },
+    {
+      "userId": 0,
+      "postId": "1",
+      "comment": "Çok iyi bir yazı elinize sağlık",
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "postId": "1",
+      "comment": "Teşekkür ederim",
+      "id": 4
     }
   ]
 }
