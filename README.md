@@ -24,7 +24,7 @@ Register componenti resim uploadı eklenecek.
 Sonraki versiyonda işlev kazanacak.
 
 
-username:superadmin
+username:kagan07
 password:123456
 
 olarak login olun ve uygulamayı kullanmaya başlayabilirsiniz.
