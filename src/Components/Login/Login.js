@@ -31,7 +31,7 @@ const Login = () => {
       );
 
       if ((await responseUser.length) === 0) {
-        alert("Kullanıcı adı veya şifre yalnış");
+        alert("Kullanıcı adı veya şifre yanlış");
       } else {
         setUser(responseUser);
         navigate("/home");

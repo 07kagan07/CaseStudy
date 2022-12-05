@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Register.css";
 
 const Register = () => {
+  const navigate = useNavigate();
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
   const [pp_src, setPp_src] = useState();
@@ -19,7 +20,8 @@ const Register = () => {
       }),
     });
 
-    alert(username, password);
+    alert("Kayıt Başarılı", username, "!!");
+    navigate("/login");
   };
   // const userRegister = (username, password) => {};
 
@@ -36,8 +38,8 @@ const Register = () => {
       <div>
         <form className="register-form" onSubmit={handlerSubmit}>
           <input
-            readOnly
-            placeholder="Upload Profile Picture"
+            type={"text"}
+            placeholder="Enter Profile Photo URL"
             onChange={(e) => setPp_src(e.target.value)}
           />
 
