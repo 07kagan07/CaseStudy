@@ -19,18 +19,16 @@ Aşağıdaki gibi başlatabilirsiniz
 ile development ortamında projeyi açabilirsiniz.
 Proje tarayacı üzerinde [http://localhost:3000](http://localhost:3000) linki üzerinde çalışıyor olacak.
 
-Register componenti resim uploadı eklenecek.
-
-Sonraki versiyonda işlev kazanacak.
-
+Register olurken profil resminizi bir url üzerinden vermeniz gerekmekte.
 
 username:kagan07
 password:123456
 
-olarak login olun ve uygulamayı kullanmaya başlayabilirsiniz.
+olarak login olun veya register üzerinden yeni bir kullanıcı tanımlayıp uygulamayı kullanmaya başlayabilirsiniz.
 
 Mainpage üzerinde Approve edişmiş postlar yayınlanmaktadır.
 Bu postları likelayabilirsiniz, PostAction.js compenenti sayesinde likelar ve unLikelar direkt olarak db ye aktarılmaktadır.
+Yorum ikonuna tıklayarak bu posta yazılımış yorumları görebilir ve yorum yazabilirsiniz.
 
 AdminPage'in içinde Pending,Approved ve Cancelled statusune sahip postları görmektesiniz.
 Buradaki postları incele butonu ile inceleyebilirsiniz. Ayrıca statusunu değiştirip yayına alabilir veya yayından kaldırabilirsiniz.
